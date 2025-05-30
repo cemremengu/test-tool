@@ -70,3 +70,10 @@ curl "http://localhost:8000/metrics"
 - **points_per_day**: Data points per day (1-144)
 
 Perfect for testing your LLM with varied time series scenarios!
+
+## Example Prompts
+
+- Get 10 days of rainfall for cyprus and provide a prediction for the next 7 days based on that data. Show these on a line chart.
+- Compare temperature and humidity for 5 days in Izmir. Use pearson correlation to analyze further.
+- I want to download 10 days temperature for Istanbul as excel.
+- Show 10 days humidity for Ankara on bar chart.
