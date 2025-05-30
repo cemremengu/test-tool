@@ -1,4 +1,5 @@
 import math
+import os
 import random
 from datetime import datetime, timedelta
 from typing import List
@@ -11,7 +12,10 @@ app = FastAPI(
     title="Weather Time Series API",
     description="Generate random time series data for any city - Perfect for testing with realistic time series datasets",
     servers=[
-        {"url": "http://localhost:8000", "description": "Local server"},
+        {
+            "url": os.getenv("OPENAPI_SERVER_URL", "http://localhost:8000"),
+            "description": "Local server",
+        },
     ],
     version="1.0.0",
     openapi_tags=[

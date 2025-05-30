@@ -26,9 +26,13 @@ python main.py
 
 ```bash
 # Build and run
+# Set OPENAPI_SERVER_URL to your desired server URL (optional)
 docker build -t timeseries-api .
 docker save timeseries-api > timeseries-api.tar
-docker run -p 8000:8000 timeseries-api
+# Example: set OpenAPI server URL to http://myserver:8000
+docker run -d -p 8000:8000 -e OPENAPI_SERVER_URL=http://myserver:8000 timeseries-api
+# Or use default (http://localhost:8000)
+docker run -d -p 8000:8000 timeseries-api
 ```
 
 ## API Documentation
