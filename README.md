@@ -27,6 +27,7 @@ python main.py
 ```bash
 # Build and run
 docker build -t timeseries-api .
+docker save timeseries-api > timeseries-api.tar
 docker run -p 8000:8000 timeseries-api
 ```
 
